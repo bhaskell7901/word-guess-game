@@ -54,7 +54,6 @@ function displayStats() {
 
 function logOutcome(decision) {
   if(decision) {
-    //alert("You won! Press the Play Game button to try again.")
     if(wins) {
       wins = parseInt(wins);
       wins += 1;
@@ -62,8 +61,8 @@ function logOutcome(decision) {
     } else {
       localStorage.setItem("wins", 1);
     }
+    alert("You won! Press the Play Game button to try again.")
   } else {
-    //alert("You lost! Press the Play Game button to try again.")
     if(losses) {
       losses = parseInt(losses);
       losses += 1;
@@ -71,6 +70,7 @@ function logOutcome(decision) {
     } else {
       localStorage.setItem("losses", 1);
     }
+    alert("You lost! Press the Play Game button to try again.")
   }
   displayStats();
 }
